@@ -1,3 +1,18 @@
+## lab 02 time estimate
+
+Number and name of feature: feature 01, 02, 03
+
+Estimate of time needed to complete: 3hrs.
+
+Start time: 3:30PM
+
+Finish time: 10:00PM
+
+Actual time needed to complete: 3hrs.
+
+I don't know what this is supposed to be asking. To my knowledge, there are no set times to complete these assignments. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
