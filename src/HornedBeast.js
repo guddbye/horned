@@ -17,6 +17,10 @@ class HornedBeast extends React.Component{
     })
   };
 
+  handleModalOpenClick=()=>{
+    this.props.openModal(this.props.title,this.props.image_url,this.props.desc);
+  }
+
   render(){
     return (           
       <Card bg="info" style={{ width: '18rem'}}>
