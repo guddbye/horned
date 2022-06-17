@@ -1,41 +1,44 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card'
 import './HornedBeast.css';
+import Card from 'react-bootstrap/Card'
 
-class HornedBeast extends React.Component{
-  constructor(props){
-    super(props);
-    this.state={
-      likes:0,
+class HornedBeast extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            votes: 0
+        };
     };
-  };
 
-  handleLikes=()=>{
+handleVotes = () => {
     this.setState({
-      likes:this.state.likes +1
-    })
-  };
+        votes: this.state.votes + 1
+    });
+};
 
-  handleModalOpenClick=()=>{
-    this.props.openModal(this.props.title,this.props.image_url,this.props.desc);
-  }
+handleTitleClick = () => {
+	this.props.handleOnShowModal(this.props.title, this.props.image_url)
+}
 
-  render(){
-    return (           
-      <Card bg="info" style={{ width: '18rem'}}>
-      <Card.Img variant="top" src={this.props.image_url} />
-      <Card.Body>
-        <Card.Title>{this.props.title}</Card.Title>
-        <Card.Text>
-          {this.props.desc}
-        </Card.Text>
-        <Button variant="secondary" onClick={this.handleLikes}>Like</Button>
-        <p>💚 {this.state.likes} Likes </p>
-      </Card.Body>
-    </Card>
-      );
-  };
+
+
+render() {
+    return (
+    <article>
+        <Card bg="dark" text="light" style={{ width: '20rem' }}>
+  <Card.Body>
+    <Card.Title onClick={this.handleTitleClick}>{this.props.title}</Card.Title>
+    <Card.Text>{this.props.description}</Card.Text>
+    <Card.Text> 💚 {this.state.votes} Likes </Card.Text>
+  <Card.Img variant="bottom" src={this.props.image_url} onClick={this.handleVotes}/>
+  </Card.Body>
+</Card>
+</article>
+    );
+};
+
+
+
 }
 
 export default HornedBeast;

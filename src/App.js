@@ -1,26 +1,19 @@
-import React from 'react';
-import Main from './Main.js';
-import Modal from 'react-bootstrap/Modal';
-import Header from './Header.js';
-import Footer from './Footer.js';
+import React from "react";
+import Header from './Header';
+import Main from "./Main";
+import Footer from "./Footer";
+import Modal from 'react-bootstrap/Modal'
 import data from './data.json';
 import './App.css';
-
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      heart: '',
       showModal: false,
-      selectedPerson: ''
+      selectedBeast: '',
+      selectedBeastImg:''
     };
-  };
-
-  addHearts = () => {
-    this.setState({
-      heart: this.state.heart + '❤️'
-    });
   };
 
   handleOnHide = () => {
@@ -28,10 +21,12 @@ class App extends React.Component {
       showModal: false
     });
   };
-  handleOnShowModal = (name) => {
+
+  handleOnShowModal = (title, image_url) => {
     this.setState({
       showModal: true,
-      selectedPerson: name
+      selectedBeast: title,
+      selectedBeastImg: image_url
     });
   };
 
@@ -39,22 +34,22 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Header
-          hearts={this.state.heart}
-        />
+        <Header />
         <Main
-          addHearts={this.addHearts}
           data={data}
           handleOnShowModal={this.handleOnShowModal}
         />
-        <Footer>Brentice Loper</Footer>
-        <Modal
-          show={this.state.showModal}
-          onHide={this.handleOnHide}
+        <Footer />
+        <Modal 
+        show={this.state.showModal} 
+        onHide={this.handleOnHide}
+        style={{ width: '100%' }}
         >
           <Modal.Header closeButton>
-            <Modal.Title>{this.state.selectedPerson}</Modal.Title>
+            <Modal.Title>{this.state.selectedBeast}</Modal.Title>
           </Modal.Header>
+          <Modal.Body>
+            <img className='img-fluid' src={this.state.selectedBeastImg} alt={this.state.selectedBeast} /></Modal.Body>  
         </Modal>
       </>
     );
