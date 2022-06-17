@@ -1,3 +1,16 @@
+## Lab03
+
+Number and name of feature: feature 01
+
+Estimate of time needed to complete: 03hrs
+
+Start time: 3:30PM
+
+Finish time: 6:00PM
+
+Actual time needed to complete: 03hrs
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
