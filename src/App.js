@@ -56,4 +56,19 @@ class App extends React.Component {
   }
 }
 
+<form onSubmit={this.handleSubmit}>
+            <label>Name:
+              <input type="text" name="name" onInput={this.handleInput}/>
+            </label>
+            <fieldset>
+              <legend>Selected Numbers</legend>
+              <select name="selected" onChange={this.handleSelect}>
+                <option value="all">All</option>
+                <option value="even">Even</option>
+                <option value="odd">Odd</option>
+              </select>
+            </fieldset>
+            <button type="submit">Submit</button>
+          </form>
+          
 export default App;
