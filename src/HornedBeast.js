@@ -21,7 +21,7 @@ class HornedBeast extends React.Component {
 
   render () {
     return (
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '20rem' }}>
       <Card.Img 
         variant="top" 
         src={this.props.image_url} 
@@ -33,7 +33,7 @@ class HornedBeast extends React.Component {
       <Card.Body>
         <Card.Title>{this.props.title}</Card.Title>
         <Card.Text>{this.props.description}</Card.Text>
-        <Button onClick={this.handleVotes} variant="primary">Button</Button>
+        <Button onClick={this.handleVotes} variant="primary">Like</Button>
       </Card.Body>
     </Card>
     )
