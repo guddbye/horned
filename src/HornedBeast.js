@@ -1,44 +1,43 @@
-import React from "react";
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import './HornedBeast.css';
-import Card from 'react-bootstrap/Card'
 
 class HornedBeast extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            votes: 0
-        };
+  constructor(props) {
+    super(props);
+    this.state = {
+      votes: 0
     };
+  };
 
-handleVotes = () => {
+  handleVotes = () => {
     this.setState({
-        votes: this.state.votes + 1
-    });
-};
+      votes: this.state.votes + 1,
+    })
+  }
 
-handleTitleClick = () => {
-	this.props.handleOnShowModal(this.props.title, this.props.image_url)
-}
+  
 
-
-
-render() {
+  render () {
     return (
-    <article>
-        <Card bg="dark" text="light" style={{ width: '20rem' }}>
-  <Card.Body>
-    <Card.Title onClick={this.handleTitleClick}>{this.props.title}</Card.Title>
-    <Card.Text>{this.props.description}</Card.Text>
-    <Card.Text> 💚 {this.state.votes} Likes </Card.Text>
-  <Card.Img variant="bottom" src={this.props.image_url} onClick={this.handleVotes}/>
-  </Card.Body>
-</Card>
-</article>
-    );
-};
-
-
-
+      <Card style={{ width: '18rem' }}>
+      <Card.Img 
+        variant="top" 
+        src={this.props.image_url} 
+        onClick={() => {this.props.openModal(this.props.beast)}} 
+        alt={this.props.alt} 
+        title={this.props.title}
+      />
+      <Card.Text>❤️ {this.state.votes}</Card.Text>
+      <Card.Body>
+        <Card.Title>{this.props.title}</Card.Title>
+        <Card.Text>{this.props.description}</Card.Text>
+        <Button onClick={this.handleVotes} variant="primary">Button</Button>
+      </Card.Body>
+    </Card>
+    )
+  }
 }
 
 export default HornedBeast;

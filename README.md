@@ -1,3 +1,15 @@
+## lab 04 time estimate
+
+Number and name of feature: filtering and tracking.
+
+Estimate of time needed to complete: 40 minutes.
+
+Start time: 8:45PM
+
+Finish time: 11:30PM
+
+Actual time needed to complete: More than enough.
+
 ## lab 02 time estimate
 
 Number and name of feature: feature 01, 02, 03
