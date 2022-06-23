@@ -10,6 +10,20 @@ Finish time: 11:30PM
 
 Actual time needed to complete: More than enough.
 
+
+## lab 03 time estimate
+
+Number and name of feature: finalizing.
+
+Estimate of time needed to complete: 20min.
+
+Start time: 6:30PM
+
+Finish time: 7:30PM
+
+Actual time needed to complete: 1hr
+
+
 ## lab 02 time estimate
 
 Number and name of feature: feature 01, 02, 03
